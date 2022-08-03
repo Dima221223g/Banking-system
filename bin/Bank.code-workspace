@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Banking System",
+			"path": "..\\Banking System"
+		}
+	],
+	"settings": {
+		"dataworkspace.excludedProjects": [
+			"Bank/Bank.sqlproj"
+		]
+	}
+}
