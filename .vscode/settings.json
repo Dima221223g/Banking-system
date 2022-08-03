@@ -5,9 +5,14 @@
         "c:\\Program Files\\sqljdbc_10.2"
     ],
     "java.project.outputPath": "bin",
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "c:\\Program Files\\sqljdbc_10.2\\rus\\mssql-jdbc-10.2.1.jre8.jar"
-    ],
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "c:\\Program Files\\sqljdbc_10.2\\rus\\mssql-jdbc-10.2.1.jre8.jar"
+        ],
+        "exclude": [
+            "lib/mssql-jdbc-10.2.1.jre8.jar"
+        ]
+    },
     "java.dependency.packagePresentation": "hierarchical"
 }

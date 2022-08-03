@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class SQLDatabaseConnection {
     public static void main(String[] args) throws ClassNotFoundException {
-        String connectionUrl = "jdbc:sqlserver://LAPTOP-VBM2QA8J:3306/BankingSystem";
+        String connectionUrl = "jdbc:sqlserver://LAPTOP-VBM2QA8J:1433/Banking-system";
         Class.forName("com.mysql.jdbc.Driver");
 
         String insertSql = "INSERT INTO BankingUser (cardNo, userName, passWord, phone, balance) VALUES"
@@ -16,7 +16,6 @@ public class SQLDatabaseConnection {
         try (Connection connection = DriverManager.getConnection(connectionUrl);
                 PreparedStatement prepsInsertBankingUser = connection.prepareStatement(insertSql,
                         Statement.RETURN_GENERATED_KEYS);) {
-            // code here.
             prepsInsertBankingUser.execute();
             resultSet = prepsInsertBankingUser.getGeneratedKeys();
             while (resultSet.next()) {
